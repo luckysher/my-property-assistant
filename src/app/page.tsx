@@ -10,6 +10,7 @@ const properties = [
     beds: 4,
     baths: 4,
     area: 3200,
+    description: "A modern luxury villa in Delhi NCR with 4 beds and 4 bath rooms, having semi furenished furniture and with amenities:- parking area, wifi, security guard, swimming pool. This villa is just 5 minutes away from the NH10 and 30 minutes away from nation capital region.",
     type: "Villa",
     image:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",
@@ -22,6 +23,7 @@ const properties = [
     beds: 3,
     baths: 3,
     area: 1850,
+    description: "A Premium 3BHK aparment with wide area along with 3 beds and 3 bath rooms, having furenished furniture and with amenities:- parking area, wifi, water, swimming pool, lawn. This apartment has wooden flooring and 60 minutes away from nation capital region.",
     type: "Apartment",
     image:
       "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80",
@@ -35,6 +37,7 @@ const properties = [
     baths: 2,
     area: 2100,
     type: "House",
+    description: "A Complete family home very suitable for joint family 4 beds with attached bathrooms, having furenished furniture and with amenities:- lawn, water, swimming pool, sea view. This home have Italian marble flooring and just 10 minutes away from NH20.",
     image:
       "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80",
   },
@@ -46,6 +49,7 @@ const properties = [
     beds: 3,
     baths: 3,
     area: 1650,
+    description: "A awesome Downtown apartment who love to leave downtown very suitable for business mans, gove employees etc. And have 5 beds with 3 bathrooms with amenities:- lawn, water, security guard. This apratment has Italian marble flooring on ground floor and wooden flooring on second floor.",
     type: "Apartment",
     image:
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80",
@@ -58,6 +62,7 @@ const properties = [
     beds: 4,
     baths: 4,
     area: 2800,
+    description: "A Green valley villa for Royal family who love to leave in Pune. The villa have 5 beds with 3 bathrooms with amenities:- wide lawn, water, swiming pool, security guard. This apratment has Italian marble flooring on ground floor and wooden flooring on second floor.",
     type: "Villa",
     image:
       "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80",
@@ -70,6 +75,7 @@ const properties = [
     beds: 2,
     baths: 2,
     area: 1250,
+    description: "A small 2BHK home for medium family near pink city. The house have 2 beds with 2 bathrooms with amenities:- water, wifi.",
     type: "House",
     image:
       "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80",
@@ -83,6 +89,7 @@ const properties = [
     baths: 3,
     area: 1900,
     type: "Apartment",
+    description: "A Sea view luxury apartment who want to live near the beach with greenary all over. Just 60 mins away from the capital of Goa. The apartment have 3 beds with 3 bathrooms with amenities:- wide lawn, water, swiming pool, security guard, wifi.",
     image:
       "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=80",
   },
@@ -95,6 +102,7 @@ const properties = [
     baths: 3,
     area: 2500,
     type: "House",
+    description: "A Sea view luxury apartment who want to live near the beach with greenary all over. Just 60 mins away from the capital of Goa. The apartment have 4 beds with 3 bathrooms with amenities:- wide lawn, water, swiming pool, security guard, wifi.",
     image:
       "https://images.unsplash.com/photo-1600047508788-7864a6e1e7e4?auto=format&fit=crop&w=900&q=80",
   },
@@ -107,6 +115,7 @@ const properties = [
     baths: 4,
     area: 3500,
     type: "Penthouse",
+    description: "A luxury penthouse who want to live near the beach with awesome sea view. Semi furnished house amenities:- wifi, water, swiming pool",
     image:
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80",
   },
@@ -119,6 +128,7 @@ const properties = [
     baths: 2,
     area: 1550,
     type: "Apartment",
+    description: "A Luxury apartment in modern city suitable to 3 persons having two attachde bathrooms. Semi furnished house amenities:- wifi, water, security guard, parking area.",
     image:
       "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80",
   },
@@ -292,7 +302,7 @@ export default function Home() {
       <footer className="border-t bg-white">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-8 sm:flex-row">
           <div>
-            <h3 className="font-bold text-indigo-600">PropertyHub</h3>
+            <h3 className="font-bold text-indigo-600">VertexLiving</h3>
             <p className="mt-1 text-sm text-gray-500">
               Your trusted property marketplace.
             </p>
@@ -342,6 +352,11 @@ function PropertyCard({ property }) {
             <p className="mt-1 text-sm text-gray-500">
               📍 {property.location}
             </p>
+          </div>
+        </div>
+        <div className="flex items-start justify-between gap-3">
+          <div className="text-sm text-gray-900">
+              {property.description || ""}
           </div>
         </div>
 
