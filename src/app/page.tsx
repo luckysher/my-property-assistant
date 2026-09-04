@@ -287,7 +287,7 @@ export default function Home() {
             </p>
           </div>
         ) : (
-          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3" id={"property-list"}>
             {filteredProperties.map((property) => (
               <PropertyCard
                 key={property.id}
