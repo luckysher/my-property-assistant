@@ -28,8 +28,8 @@ body {
 /* chatbot css */
 .realestate-chat-button {
   position: fixed;
-  right: 25px;
-  bottom: 25px;
+  right: 45px;
+  bottom: 120px;
 
   width: 60px;
   height: 60px;
@@ -55,8 +55,8 @@ body {
   right: 25px;
   bottom: 25px;
 
-  width: 390px;
-  height: 650px;
+  width: 430px;
+  height: 620px;
 
   background: white;
 
