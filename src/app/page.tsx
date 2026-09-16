@@ -1,5 +1,6 @@
 "use client";
 import React, { useMemo, useState } from "react";
+import RealEstateChatbot from "./components/RealEstateChatbot"
 
 const properties = [
   {
@@ -102,9 +103,9 @@ const properties = [
     baths: 3,
     area: 2500,
     type: "House",
-    description: "A Sea view luxury apartment who want to live near the beach with greenary all over. Just 60 mins away from the capital of Goa. The apartment have 4 beds with 3 bathrooms with amenities:- wide lawn, water, swiming pool, security guard, wifi.",
+    description: "A Sea view luxury apartment who want to live near the beach with greenary all over. Just 60 mins away from the capital of Karnataka. The apartment have 4 beds with 3 bathrooms with amenities:- wide lawn, water, swiming pool, security guard, wifi.",
     image:
-      "https://images.unsplash.com/photo-1600047508788-7864a6e1e7e4?auto=format&fit=crop&w=900&q=80",
+      "https://hips.hearstapps.com/hmg-prod/images/a2a34631-08fa-4efd-86b0-4f43a5bfa1b2.jpg?crop=1xw:1xh;center,top",
   },
   {
     id: 9,
@@ -384,6 +385,10 @@ function PropertyCard({ property }) {
           View Details
         </button>
       </div>
+
+       {/* AI Chatbot */}
+       <RealEstateChatbot />
+
     </article>
   );
 }
