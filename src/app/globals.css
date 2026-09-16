@@ -24,3 +24,455 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* chatbot css */
+.realestate-chat-button {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+
+  width: 60px;
+  height: 60px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 26px;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+  z-index: 9999;
+}
+
+.realestate-chatbot {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  width: 390px;
+  height: 650px;
+
+  background: white;
+
+  border-radius: 18px;
+
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  z-index: 9999;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* Header */
+
+.chat-header {
+  height: 75px;
+
+  background: #2563eb;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 18px;
+}
+
+.assistant-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.assistant-avatar {
+  width: 42px;
+  height: 42px;
+
+  background: white;
+  color: #2563eb;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+}
+
+.assistant-name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.assistant-status {
+  font-size: 12px;
+  opacity: 0.9;
+
+  margin-top: 3px;
+}
+
+.online-dot {
+  display: inline-block;
+
+  width: 7px;
+  height: 7px;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+
+  margin-right: 5px;
+}
+
+.close-button {
+  border: none;
+  background: transparent;
+
+  color: white;
+
+  font-size: 30px;
+
+  cursor: pointer;
+}
+
+/* Messages */
+
+.chat-messages {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 18px;
+
+  background: #f8fafc;
+}
+
+.message-row {
+  display: flex;
+
+  gap: 8px;
+
+  margin-bottom: 15px;
+}
+
+.message-row.user {
+  justify-content: flex-end;
+}
+
+.small-avatar {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #dbeafe;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+}
+
+.message-content {
+  max-width: 80%;
+}
+
+.message-bubble {
+  padding: 11px 14px;
+
+  border-radius: 14px;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.message-row.ai .message-bubble {
+  background: white;
+
+  color: #1e293b;
+
+  border-top-left-radius: 4px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.message-row.user .message-bubble {
+  background: #2563eb;
+
+  color: white;
+
+  border-top-right-radius: 4px;
+}
+
+/* Property Cards */
+
+.property-results {
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.property-card {
+  background: white;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  border: 1px solid #e2e8f0;
+}
+
+.property-card img {
+  width: 100%;
+  height: 130px;
+
+  object-fit: cover;
+}
+
+.property-details {
+  padding: 10px;
+}
+
+.property-details h4 {
+  margin: 0 0 5px;
+
+  font-size: 14px;
+
+  color: #0f172a;
+}
+
+.property-details p {
+  margin: 3px 0;
+
+  font-size: 12px;
+
+  color: #64748b;
+}
+
+.property-details strong {
+  display: block;
+
+  margin: 6px 0;
+
+  font-size: 15px;
+
+  color: #2563eb;
+}
+
+.property-details button {
+  width: 100%;
+
+  padding: 8px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* Quick Questions */
+
+.quick-questions {
+  display: flex;
+
+  gap: 7px;
+
+  overflow-x: auto;
+
+  padding: 10px 12px;
+
+  border-top: 1px solid #e2e8f0;
+
+  background: white;
+}
+
+.quick-questions button {
+  flex-shrink: 0;
+
+  padding: 7px 10px;
+
+  border: 1px solid #dbeafe;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  border-radius: 15px;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+/* Input */
+
+.chat-input-container {
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 8px;
+
+  padding: 12px;
+
+  border-top: 1px solid #e2e8f0;
+
+  background: white;
+}
+
+.chat-input-container textarea {
+  flex: 1;
+
+  resize: none;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 10px;
+
+  padding: 10px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  max-height: 100px;
+}
+
+.chat-input-container textarea:focus {
+  border-color: #2563eb;
+}
+
+.send-button {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+.send-button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* Typing */
+
+.typing-indicator {
+  background: white;
+
+  padding: 12px 15px;
+
+  border-radius: 14px;
+
+  display: flex;
+
+  gap: 4px;
+}
+
+.typing-indicator span {
+  width: 6px;
+  height: 6px;
+
+  background: #94a3b8;
+
+  border-radius: 50%;
+
+  animation: typing 1.2s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Footer */
+
+.chat-footer {
+  text-align: center;
+
+  padding: 5px;
+
+  font-size: 9px;
+
+  color: #94a3b8;
+
+  background: white;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .realestate-chatbot {
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0;
+  }
+
+  .realestate-chat-button {
+    right: 18px;
+    bottom: 18px;
+  }
+}
+/* chatbot css end */
