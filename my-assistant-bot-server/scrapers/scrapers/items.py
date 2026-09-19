@@ -7,7 +7,7 @@ from dataclasses import dataclass
 
 @dataclass
 class Property:
-
+    id: str | None = None
     title: str | None = None
     house_type: str | None = None
     location: str | None = None
@@ -15,5 +15,6 @@ class Property:
     description: str | None = None
     bath: str | None = None
     beds: str | None = None
+    amenities: str | None = None
     area_in_sqr_ft: str | None = None
 
