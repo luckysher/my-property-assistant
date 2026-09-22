@@ -12,6 +12,7 @@ class Property:
     house_type: str | None = None
     location: str | None = None
     price: int | None = None
+    image_url: str | None = None
     description: str | None = None
     bath: str | None = None
     beds: str | None = None
