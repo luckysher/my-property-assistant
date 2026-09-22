@@ -1,6 +1,6 @@
 "use client";
 import React, { useMemo, useState } from "react";
-import RealEstateChatbot from "./components/RealEstateChatbot"
+import RealEstateChatbot from "./components/realEstateChatbot"
 
 const properties = [
   {
@@ -11,6 +11,7 @@ const properties = [
     beds: 4,
     baths: 4,
     area: 3200,
+    amenities: "parking, wifi, security guard, swimming pool",
     description: "A modern luxury villa in Delhi NCR with 4 beds and 4 bath rooms, having semi furenished furniture and with amenities:- parking area, wifi, security guard, swimming pool. This villa is just 5 minutes away from the NH10 and 30 minutes away from nation capital region.",
     type: "Villa",
     image:
@@ -24,6 +25,7 @@ const properties = [
     beds: 3,
     baths: 3,
     area: 1850,
+    amenities: "parking, wifi, water, swimming pool, lawn",
     description: "A Premium 3BHK aparment with wide area along with 3 beds and 3 bath rooms, having furenished furniture and with amenities:- parking area, wifi, water, swimming pool, lawn. This apartment has wooden flooring and 60 minutes away from nation capital region.",
     type: "Apartment",
     image:
@@ -37,6 +39,7 @@ const properties = [
     beds: 3,
     baths: 2,
     area: 2100,
+    amenities: "water, swimming pool, lawn, sear view",
     type: "House",
     description: "A Complete family home very suitable for joint family 4 beds with attached bathrooms, having furenished furniture and with amenities:- lawn, water, swimming pool, sea view. This home have Italian marble flooring and just 10 minutes away from NH20.",
     image:
@@ -50,6 +53,7 @@ const properties = [
     beds: 3,
     baths: 3,
     area: 1650,
+    amenities: "water, lawn, security guard",
     description: "A awesome Downtown apartment who love to leave downtown very suitable for business mans, gove employees etc. And have 5 beds with 3 bathrooms with amenities:- lawn, water, security guard. This apratment has Italian marble flooring on ground floor and wooden flooring on second floor.",
     type: "Apartment",
     image:
@@ -63,6 +67,7 @@ const properties = [
     beds: 4,
     baths: 4,
     area: 2800,
+    amenities: "water, lawn, security guard, swimming pool",
     description: "A Green valley villa for Royal family who love to leave in Pune. The villa have 5 beds with 3 bathrooms with amenities:- wide lawn, water, swiming pool, security guard. This apratment has Italian marble flooring on ground floor and wooden flooring on second floor.",
     type: "Villa",
     image:
@@ -76,6 +81,7 @@ const properties = [
     beds: 2,
     baths: 2,
     area: 1250,
+    amenities: "water, wifi",
     description: "A small 2BHK home for medium family near pink city. The house have 2 beds with 2 bathrooms with amenities:- water, wifi.",
     type: "House",
     image:
@@ -90,6 +96,7 @@ const properties = [
     baths: 3,
     area: 1900,
     type: "Apartment",
+    amenities: "water, wifi, lawn, swimming pool, security guard",
     description: "A Sea view luxury apartment who want to live near the beach with greenary all over. Just 60 mins away from the capital of Goa. The apartment have 3 beds with 3 bathrooms with amenities:- wide lawn, water, swiming pool, security guard, wifi.",
     image:
       "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=80",
@@ -103,6 +110,7 @@ const properties = [
     baths: 3,
     area: 2500,
     type: "House",
+    amenities: "water, wifi, lawn, swimming pool, security guard",
     description: "A Sea view luxury apartment who want to live near the beach with greenary all over. Just 60 mins away from the capital of Karnataka. The apartment have 4 beds with 3 bathrooms with amenities:- wide lawn, water, swiming pool, security guard, wifi.",
     image:
       "https://hips.hearstapps.com/hmg-prod/images/a2a34631-08fa-4efd-86b0-4f43a5bfa1b2.jpg?crop=1xw:1xh;center,top",
@@ -116,6 +124,7 @@ const properties = [
     baths: 4,
     area: 3500,
     type: "Penthouse",
+    amenities: "water, wifi, swimming pool",
     description: "A luxury penthouse who want to live near the beach with awesome sea view. Semi furnished house amenities:- wifi, water, swiming pool",
     image:
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80",
@@ -129,6 +138,7 @@ const properties = [
     baths: 2,
     area: 1550,
     type: "Apartment",
+    amenities: "water, wifi, swimming pool, security guard",
     description: "A Luxury apartment in modern city suitable to 3 persons having two attachde bathrooms. Semi furnished house amenities:- wifi, water, security guard, parking area.",
     image:
       "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80",
@@ -179,7 +189,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div>
-            <h1 className="text-2xl font-bold text-indigo-600">
+            <h1 className="text-2xl font-bold text-amber-600">
               VertexLiving
             </h1>
             <p className="text-xs text-gray-500">
@@ -188,31 +198,31 @@ export default function Home() {
           </div>
 
           <nav className="hidden gap-8 text-sm font-medium md:flex">
-            <a href="#" className="hover:text-indigo-600">
+            <a href="#" className="hover:text-amber-600">
               Buy
             </a>
-            <a href="#" className="hover:text-indigo-600">
+            <a href="#" className="hover:text-amber-600">
               Rent
             </a>
-            <a href="#" className="hover:text-indigo-600">
+            <a href="#" className="hover:text-amber-600">
               Sell
             </a>
-            <a href="#" className="hover:text-indigo-600">
+            <a href="#" className="hover:text-amber-600">
               Contact
             </a>
           </nav>
 
-          <button className="rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700">
-            List Property
+          <button className="rounded-lg bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-amber-700">
+            List Property.
           </button>
         </div>
       </header>
 
       {/* Hero */}
-      <section className="bg-indigo-700">
+      <section className="bg-amber-700">
         <div className="mx-auto max-w-7xl px-6 py-14">
           <div className="max-w-2xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-indigo-200">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-amber-200">
               Real Estate Marketplace
             </p>
 
@@ -220,7 +230,7 @@ export default function Home() {
               Find a place you'll love to live
             </h2>
 
-            <p className="mt-4 text-lg text-indigo-100">
+            <p className="mt-4 text-lg text-amber-100">
               Discover homes, apartments and luxury properties in your
               favorite locations.
             </p>
@@ -297,13 +307,17 @@ export default function Home() {
             ))}
           </div>
         )}
-      </main>
+        
+        {/* AI Chatbot */}
+        <RealEstateChatbot />
 
+      </main>        
+      
       {/* Footer */}
       <footer className="border-t bg-white">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-8 sm:flex-row">
           <div>
-            <h3 className="font-bold text-indigo-600">VertexLiving</h3>
+            <h3 className="font-bold text-amber-600">VertexLiving</h3>
             <p className="mt-1 text-sm text-gray-500">
               Your trusted property marketplace.
             </p>
@@ -360,9 +374,14 @@ function PropertyCard({ property }) {
               {property.description || ""}
           </div>
         </div>
-
+        { property.amenities && <div className="flex items-start justify-between gap-3 mt-3">
+            <div>
+              <p className="mt-1 text-sm text-gray-500"><strong>Amenities: </strong>{property.amenities}</p>
+            </div>
+          </div>
+        }
         <div className="mt-4">
-          <p className="text-2xl font-bold text-indigo-600">
+          <p className="text-2xl font-bold text-amber-600">
             {formatPrice(property.price)}
           </p>
         </div>
@@ -381,13 +400,10 @@ function PropertyCard({ property }) {
           </span>
         </div>
 
-        <button className="mt-5 w-full rounded-xl border border-indigo-600 py-2.5 text-sm font-semibold text-indigo-600 transition hover:bg-indigo-600 hover:text-white">
+        <button className="mt-5 w-full rounded-xl border border-indigo-600 py-2.5 text-sm font-semibold text-amber-600 transition hover:bg-amber-600 hover:text-white">
           View Details
         </button>
       </div>
-
-       {/* AI Chatbot */}
-       <RealEstateChatbot />
 
     </article>
   );

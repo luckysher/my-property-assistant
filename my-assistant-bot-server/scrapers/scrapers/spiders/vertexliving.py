@@ -32,16 +32,20 @@ class VertexlivingSpider(scrapy.Spider):
 
             prp = Selector(text=property_detail)
 
+            print(prp.xpath(f'//div'))
+
             # load data to items
             prop = Property(
+                id=num+1,
                 title=self.extract_text_val(prp, 'h3') or "",
                 house_type=prp.xpath(f'//div/text()').getall()[0] or "",
                 location=prp.xpath(f'//p/text()').getall()[1] or "",
-                price = prp.xpath(f'//p/text()').getall()[2] or "",
+                amenities=prp.xpath(f'//p/text()').getall()[2] or "",
+                price = prp.xpath(f'//p/text()').getall()[3] or "",
                 description=prp.xpath(f'//div/text()').getall()[1] or "",
-                bath = prp.xpath(f'//div')[1].xpath(f'//strong/text()').getall()[1] or "",
-                area_in_sqr_ft=prp.xpath(f'//div')[1].xpath(f'//strong/text()').getall()[2] or "",
-                beds = prp.xpath(f'//div')[1].xpath(f'//strong/text()').getall()[0] or ""
+                bath = prp.xpath(f'//div')[1].xpath(f'//strong/text()').getall()[2] or "",
+                area_in_sqr_ft=prp.xpath(f'//div')[1].xpath(f'//strong/text()').getall()[3] or "",
+                beds = prp.xpath(f'//div')[1].xpath(f'//strong/text()').getall()[1] or ""
             )
 
             properties.append(prop)
