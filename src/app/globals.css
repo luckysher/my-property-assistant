@@ -3,11 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --amber: #fb8248;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-amber-600: var(--amber);
+  --color-amber-400: var(--amber);
+  --color-amber-700: var(--amber);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -29,7 +33,7 @@ body {
 .realestate-chat-button {
   position: fixed;
   right: 45px;
-  bottom: 120px;
+  bottom: 60px;
 
   width: 60px;
   height: 60px;
@@ -37,7 +41,7 @@ body {
   border: none;
   border-radius: 50%;
 
-  background: #2563eb;
+  background: #fb8248;
   color: white;
 
   font-size: 26px;
@@ -55,22 +59,16 @@ body {
   right: 25px;
   bottom: 25px;
 
-  width: 430px;
+  width: 500px;
   height: 620px;
 
   background: white;
-
   border-radius: 18px;
-
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-
   display: flex;
   flex-direction: column;
-
   overflow: hidden;
-
   z-index: 9999;
-
   font-family:
     Inter,
     -apple-system,
@@ -84,7 +82,7 @@ body {
 .chat-header {
   height: 75px;
 
-  background: #2563eb;
+  background: #fb8248;
   color: white;
 
   display: flex;
@@ -105,7 +103,7 @@ body {
   height: 42px;
 
   background: white;
-  color: #2563eb;
+  color: #fb8248;
 
   border-radius: 50%;
 
@@ -218,7 +216,7 @@ body {
 }
 
 .message-row.user .message-bubble {
-  background: #2563eb;
+  background: #fb8248;
 
   color: white;
 
@@ -280,7 +278,7 @@ body {
 
   font-size: 15px;
 
-  color: #2563eb;
+  color: #fb8248;
 }
 
 .property-details button {
@@ -294,7 +292,7 @@ body {
 
   background: #eff6ff;
 
-  color: #2563eb;
+  color: #fb8248;
 
   font-weight: 600;
 
@@ -326,7 +324,7 @@ body {
 
   background: #eff6ff;
 
-  color: #2563eb;
+  color: #fb8248;
 
   border-radius: 15px;
 
@@ -372,7 +370,7 @@ body {
 }
 
 .chat-input-container textarea:focus {
-  border-color: #2563eb;
+  border-color: #fb8248;
 }
 
 .send-button {
@@ -383,7 +381,7 @@ body {
 
   border-radius: 10px;
 
-  background: #2563eb;
+  background: #fb8248;
 
   color: white;
 
