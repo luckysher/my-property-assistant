@@ -1,6 +1,9 @@
 AI assistant for property management
 ---------------------------------------
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# mock ups
+![basic-features](https://github.com/luckysher/my-property-assistant/blob/main/ai_bot_mockup_1.png)
+![basic-features](https://github.com/luckysher/my-property-assistant/blob/main/ai_bot_mockup.png)
+
 
 ## Getting Started
 
